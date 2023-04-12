@@ -1,0 +1,21 @@
+package assignment3;
+
+public class Toy extends Product {
+	public Toy(String productName, int stock) {
+		super(productName, stock);
+	}
+	float discount;
+	public void setDiscount(int age) {
+		if(age >= 2 && age < 4) {
+			this.discount = 0.15f;
+		}else if(age >= 4 && age <= 5) {
+			this.discount = 0.05f;
+		}
+	}
+	public int orderProduct(String name, int qty) {
+		return generateBill(qty, price, discount);
+	}
+	public int generateBill(int qty, int price, float discount) {
+		return (int)(qty * price * discount);
+	}
+}

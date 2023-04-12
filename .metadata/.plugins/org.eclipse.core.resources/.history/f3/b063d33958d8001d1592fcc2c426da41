@@ -1,0 +1,11 @@
+package abstract_method;
+
+abstract class Animal {
+	String Name = " ";
+	Animal(String name) {
+		this.Name = name;
+	}
+	public void Information(String detail) {
+		System.out.println("The details of " + this.Name + " is" );
+	}
+}

@@ -1,0 +1,10 @@
+package overriding3;
+
+public class Car extends Vehicle{
+	void engine() {
+		System.out.println("Car engine");
+	}
+	protected void fueltype() {
+		System.out.println("Car fueltype");
+	}
+}

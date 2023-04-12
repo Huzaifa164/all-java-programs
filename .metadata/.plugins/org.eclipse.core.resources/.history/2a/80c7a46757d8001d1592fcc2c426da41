@@ -1,0 +1,10 @@
+package overriding3;
+
+public class CodeExample {
+	public static void main(String[] args) {
+		Vehicle vehicle = new Vehicle();
+		vehicle.fueltype();
+		Vehicle benz = new Car();
+		benz.fueltype();
+	}
+}

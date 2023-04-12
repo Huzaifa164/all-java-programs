@@ -1,0 +1,9 @@
+package assignment3;
+
+public class Toy extends Product {
+	public Toy(String productName, int stock) {
+		super(productName, stock);
+	}
+	int age;
+	if()
+}

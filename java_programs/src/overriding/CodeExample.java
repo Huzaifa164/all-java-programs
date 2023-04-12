@@ -1,0 +1,12 @@
+package overriding;
+
+public class CodeExample {
+	public static void main(String[] args) {
+		Bike honda = new Bike();
+		honda.engine();
+		Car benz = new Car();
+		benz.engine();
+		Vehicle v = new Vehicle();
+		v.engine();
+	}
+}
