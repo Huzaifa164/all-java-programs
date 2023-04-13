@@ -1,15 +1,26 @@
 package assignment3;
 
 public class Product {
-	String productName;
-	int uid;
-	int stock;
-	int price;
-	int discount;
-	String description;
+	private String productName;
+	private int sequence = 1001;
+	private int uid;
+	private int stock;
+	private int price;
+	private int discount;
+	private String description;
 	public Product(String productName, int stock) {
 		this.productName = productName;
 		this.stock = stock;
+		this.uid = sequence++;
+	}
+	
+	public Product(String productName, int stock, int price) {
+		this(productName, stock);
+		this.price = price;
+	}
+	
+	public Product() {
+		this.uid = sequence++;
 	}
 	
 	public void getInfo() {
@@ -23,24 +34,52 @@ public class Product {
 	public void changeDesc(String desc) {
 		this.description = desc;
 	}
-	
-	public int orderProduct(String name, int qty) {
-		int total = generateBill(qty, price);
-		return total;
+
+	public String getProductName() {
+		return productName;
 	}
-	
-	public int generateBill(int qty, int price) {
-		return qty * price;
+
+	public void setProductName(String productName) {
+		this.productName = productName;
 	}
-	public static void main(String[] args) {
-		Book b1 = new Book("Head first java", 50);
-		b1.uid = 1;
-		b1.price = 200;
-		b1.description = "This is java book.";
-		b1.getInfo();
-		b1.changeDesc("This is core java book");
-		b1.getInfo();
-		int price = b1.orderProduct("Head first java", 2);
-		System.out.println(price);
+
+	public int getUid() {
+		return uid;
+	}
+
+	public void setUid(int uid) {
+		this.uid = uid;
+	}
+
+	public int getStock() {
+		return stock;
+	}
+
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public int getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(int discount) {
+		this.discount = discount;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }

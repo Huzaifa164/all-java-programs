@@ -1,21 +1,23 @@
 package assignment3;
 
 public class Toy extends Product {
+	int age;
 	public Toy(String productName, int stock) {
 		super(productName, stock);
 	}
-	float discount;
-	public void setDiscount(int age) {
-		if(age >= 2 && age < 4) {
-			this.discount = 0.85f;
-		}else if(age >= 4 && age <= 5) {
-			this.discount = 0.95f;
-		}
+	public Toy(String productName, int stock, int price, int age) {
+		super(productName, stock, price);
+		this.age = age;
 	}
-	public int orderProduct(String name, int qty) {
-		return generateBill(qty, price, discount);
+	@Override
+	public void getInfo() {
+		super.getInfo();
+		System.out.println("Age: " + age);
 	}
-	public int generateBill(int qty, int price, float discount) {
-		return (int)(qty * price * discount);
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
 	}
 }

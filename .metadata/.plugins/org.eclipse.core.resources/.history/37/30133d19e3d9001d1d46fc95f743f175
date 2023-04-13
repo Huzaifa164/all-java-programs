@@ -1,0 +1,25 @@
+package assignment4;
+
+public class PhoneBook {
+	String name;
+	Contact[] contacts;
+	
+	public void add(Contact contact) {
+		
+	}
+	
+	public Contact[] searchByName(String name) {
+		
+	}
+	
+	public Contact searchByNumber(int number) {
+		
+	}
+	
+	public void remove(String name) {
+		
+	}
+	 public void display() {
+		 
+	 }
+}

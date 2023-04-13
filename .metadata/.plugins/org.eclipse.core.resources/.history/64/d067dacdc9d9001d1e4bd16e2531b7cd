@@ -1,0 +1,8 @@
+package assignment3;
+
+public class App {
+	public static void main(String[] args) {
+		ProductInventory inv = new ProductInventory();
+		inv.add(new Book("Head first java", 50, 200));
+	}
+}

@@ -1,0 +1,51 @@
+package assignment4;
+
+import java.util.Arrays;
+
+public class PhoneBook {
+	String name;
+	Contact[] contacts = new Contact[5];
+	static private int count = 0;
+	public void add(Contact contact) {
+		contacts[count++] = contact;
+	}
+	private int countResult = 0;
+	public Contact[] searchByName(String name) {
+		
+		Contact[] result = new Contact[5];
+		for(Contact contact: contacts) {
+			if(contact.getName() == name) {
+				result[countResult++] = contact;
+			}
+		}
+		return result;
+	}
+	
+	public Contact searchByNumber(String number) {
+//		Contact result = new Contact();
+		Contact result;
+		for(Contact contact: contacts) {
+			if(contact.getNumber() == number) {
+//				result = contact;
+				result = new Contact(contact.getName(), contact.getNumber(), contact.getEmail());
+			}
+		}
+		return result;
+	}
+	
+	public void remove(String name) {
+		for(int contact = 0; contact < contacts.length; contact++) {
+			if(contact < contacts.length - 1 && contacts[contact].getName() == name) {
+				contacts[contact] = contacts[contact + 1];
+			}
+			else if(contact == contacts.length - 1 && contacts[contact].getName() == name) {
+				contacts = Arrays.copyOf(contacts, contacts.length - 1);
+			}
+		}
+	}
+	 public void display() {
+		 for(Contact contact: contacts) {
+			 System.out.println(contact.getName() + "," + contact.getNumber() + "," + contact.getEmail());
+		 }
+	 }
+}

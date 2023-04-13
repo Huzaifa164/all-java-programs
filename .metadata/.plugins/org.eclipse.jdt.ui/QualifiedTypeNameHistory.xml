@@ -4,4 +4,9 @@
     <fullyQualifiedTypeName name="abstract_method.AbstractMethodEx1"/>
     <fullyQualifiedTypeName name="abstract_method2.SquareCube"/>
     <fullyQualifiedTypeName name="abstract_method2.AbstractMethodEx2"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="assignment3.ProductInventory"/>
+    <fullyQualifiedTypeName name="assignment4.PhoneBook"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="assignment4.Contact"/>
 </qualifiedTypeNameHistroy>
