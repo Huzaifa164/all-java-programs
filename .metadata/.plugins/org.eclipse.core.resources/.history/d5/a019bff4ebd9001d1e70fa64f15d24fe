@@ -25,6 +25,6 @@ public class App {
 		c1.setName("Huzaifa");
 		c1.setNumber("13232");
 		c1.setEmail("huzaifa@.com");
-		System.out.println(c1.getName() + "," + c1.getNumber() + "," + c1.getEmail());
+		System.out.println(s1.getName() + "," + c1.getEmail() + "," + c1.getEmail());
 	}
 }
